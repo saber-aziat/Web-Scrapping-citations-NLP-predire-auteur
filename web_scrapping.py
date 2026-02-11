@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 
 fichier = "quotes.csv"
 
-# en fait le scrapping pour 10 pages ( len(pages) )
 for NumberOfPage in range(1, 11):
 
     print(f"Scrapping de la page {NumberOfPage} en cours...")
@@ -28,7 +27,7 @@ for NumberOfPage in range(1, 11):
 
             page = NumberOfPage
 
-            # ecriture CSV (UNE SEULE FOIS)
+            # Ecriture CSV (UNE SEULE FOIS)
             if not os.path.exists(fichier):
                 with open(fichier, "w", newline="", encoding="utf-8") as f:
                     writer = csv.writer(f)
