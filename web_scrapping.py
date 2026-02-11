@@ -27,7 +27,7 @@ for NumberOfPage in range(1, 11):
 
             page = NumberOfPage
 
-            # Ecriture CSV (UNE SEULE FOIS)
+            # Enregistrer les donnes sur le fichier CSV 
             if not os.path.exists(fichier):
                 with open(fichier, "w", newline="", encoding="utf-8") as f:
                     writer = csv.writer(f)
